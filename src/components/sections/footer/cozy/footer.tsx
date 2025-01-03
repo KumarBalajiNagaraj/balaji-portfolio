@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '@/components/motion/link';import { metadata as meta } from '@/app/config';
+import Link from '@/components/motion/link'; import { metadata as meta } from '@/app/config';
 
 import { footer } from '@/components/sections/footer/config';
 
@@ -14,13 +14,15 @@ function Footer() {
           const { title, href } = link;
 
           return (
-            <Link
-              className="text-xs underline-offset-4 hover:underline"
-              href={href}
-              key={`l_${index}`}
-            >
-              {title}
-            </Link>
+            // eslint-disable-next-line react/jsx-key
+            <div className="text-xs underline-offset-4 hover:underline">
+              <Link
+                href={href}
+                key={`l_${index}`}
+              >
+                {title}
+              </Link>
+            </div>
           );
         })}
       </nav>

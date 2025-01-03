@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from '@/components/motion/link';
@@ -82,11 +83,13 @@ const Header = ({ loader }: HeaderProps) => {
     >
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex w-full justify-between">
-          <Link href="/" className="flex items-center justify-center">
-            <span className="text-md font-semibold transition-transform text-transform capitalize hover:translate-x-1 hover:translate-y-1">
-              Balaji Nagaraj Kumar
-            </span>
-          </Link>
+          <div className="flex items-center justify-center">
+            <Link href="/">
+              <span className="text-md font-semibold transition-transform text-transform capitalize hover:translate-x-1 hover:translate-y-1">
+                Balaji Nagaraj Kumar
+              </span>
+            </Link>
+          </div>
 
           <button className="md:hidden" onClick={toggleMenu}>
             <span className="sr-only">{isOpen ? 'Close' : 'Menu'}</span>
@@ -100,13 +103,14 @@ const Header = ({ loader }: HeaderProps) => {
             <nav className="flex items-center gap-4">
               <div className="flex items-center gap-4 lg:gap-6">
                 {links.slice(0, linkLimit).map(({ title, href }, index) => (
-                  <Link
-                    className="flex items-center text-sm font-medium underline-offset-4 hover:underline"
-                    href={href}
-                    key={`header-desktop-link_${index}`}
-                  >
-                    {title}
-                  </Link>
+                  <div className="flex items-center text-sm font-medium underline-offset-4 hover:underline">
+                    <Link
+                      href={href}
+                      key={`header-desktop-link_${index}`}
+                    >
+                      {title}
+                    </Link>
+                  </div>
                 ))}
 
                 {links.length > linkLimit && (
@@ -147,14 +151,16 @@ const Header = ({ loader }: HeaderProps) => {
       >
         <div className="flex flex-col gap-4 p-4">
           {links.map(({ title, href }, index) => (
-            <Link
-              className="flex items-center text-sm font-medium underline-offset-4 hover:underline"
-              href={href}
-              onClick={toggleMenu}
-              key={`header-mobile-link_${index}`}
-            >
-              {title}
-            </Link>
+            <div className="flex items-center text-sm font-medium underline-offset-4 hover:underline">
+              <Link
+                href={href}
+                onClick={toggleMenu}
+                key={`header-mobile-link_${index}`}
+              >
+                {title}
+              </Link>
+            </div>
+
           ))}
           <div className="flex w-full items-center justify-end">
             <ThemeToggle />

@@ -45,7 +45,7 @@ export default function About() {
           Growing up in India, I was captivated by the power of technology to
           transform lives. This curiosity took me through rigorous academic
           pursuits and enriching professional experiences, eventually landing me
-          in Sweden. Today, I’m proud to leverage this global exposure to
+          in Sweden. Today, I am proud to leverage this global exposure to
           deliver innovative solutions as a product manager on the global stage.
         </p>
         <Image
@@ -91,7 +91,7 @@ export default function About() {
         </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
           My academic journey began with a strong technical foundation in India,
-          which laid the groundwork for advanced studies in Sweden. My master's
+          which laid the groundwork for advanced studies in Sweden. My masters
           degree fueled my passion for problem-solving, exposing me to global
           perspectives and advanced methodologies that continue to inspire my
           work today.

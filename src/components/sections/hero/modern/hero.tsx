@@ -45,7 +45,7 @@ function Hero() {
 
           </Reveal>
           <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-            <TextReveal>Hi, I'm <br /> Balaji Nagaraj Kumar</TextReveal>
+            <TextReveal>Hi, I am <br /> Balaji Nagaraj Kumar</TextReveal>
           </h1>
           <Reveal>
             <p className="mt-4 text-lg text-muted-foreground">

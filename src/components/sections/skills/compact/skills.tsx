@@ -24,8 +24,10 @@ function Skills() {
               <SkillCard
                 key={`skill_${index}`}
                 name={skill.name}
+                highlighter={skill.highlighter}
                 description={skill.description}
                 thumbnail={skill.thumbnail}
+                stat={skill.stat}
               />
             ))}
           </div>

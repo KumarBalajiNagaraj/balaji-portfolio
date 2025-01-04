@@ -34,8 +34,11 @@ function Skills() {
               key={`skill_${index}`}
               index={index + 1}
               name={skill.name}
+              highlighter={skill.highlighter}
               description={skill.description}
               thumbnail={skill.thumbnail}
+              stat={skill.stat}
+
             />
           ))}
         </div>

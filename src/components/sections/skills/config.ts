@@ -4,25 +4,51 @@ const trimLen: number = -1; // 0 is accordion only, -1 is does not restrict the 
 
 const skills: Skill[] = [
   {
-    name: 'Web Development',
+    name: 'Product Strategy & Vision',
     // todo: use proper thumbnail pics
+    highlighter: 'Not just in words, but in action - I turn ideas into reality with a clear vision and strategy.',
     thumbnail: '/images/skills/web-development.jpg',
-    description: `Web Development involves creating websites and web applications that are both visually appealing and highly functional. It encompasses a variety of technologies, frameworks, and best practices to ensure a seamless user experience and efficient performance.`
+    description: `Driving long-term impact through product innovation and alignment. I excel at conceptualizing long-term product roadmaps, aligning business objectives with user needs, and adapting to market trends. My strength lies in transforming strategic visions into actionable initiatives that lead to tangible milestones and market success.`,
+    stat: '7+ Years | 15 Products'
   },
   {
-    name: 'UI/UX Design',
+    name: 'Cross-Functional Collaboration & Leadership',
+    highlighter: 'I do not just bring teams together—I inspire alignment and momentum toward shared success.',
     thumbnail: '/images/skills/ui-ux-design.jpg',
-    description: `UI/UX Design focuses on creating delightful user experiences through visually appealing and highly functional designs. This skill includes a variety of technologies, frameworks, and best practices to enhance user satisfaction and usability.`
+    description: `Fostering collaboration across diverse teams to drive shared success. I lead cross-functional teams with a clear focus on communication, alignment, and shared objectives. My experience working with developers, designers, stakeholders, and partners enables me to foster a culture of collaboration and innovation.`,
+    stat: 'Lead 3 teams | 20+ Members'
   },
   {
-    name: 'Database Management',
+    name: 'Data-Driven Decision Making',
+    highlighter:"Data isn't just numbers—it's the story that shapes every product decision I make.",
     thumbnail: '/images/skills/database-management.jpg',
-    description: `Database Management involves efficiently storing and organizing data. This skill covers a range of technologies, frameworks, and best practices to ensure data integrity, security, and performance.`
+    description: `Turning data into actionable insights for continuous improvement.
+I thrive on using data to validate ideas, iterate on solutions, and measure success. From user feedback to advanced analytics, I ensure that every product decision is informed by real-world insights.`,
+    stat: 'Eats Data for Breakfast'
   },
   {
-    name: 'Mobile Development',
+    name: 'User-Centric Design Thinking & Rapid Prototyping',
+    highlighter: 'I design experiences that don’t just solve problems—they make users feel empowered.',
     thumbnail: '/images/skills/mobile-development.jpg',
-    description: `Mobile Development entails crafting apps for smartphones and tablets that are both visually appealing and highly functional. It includes a variety of technologies, frameworks, and best practices to provide a seamless user experience on mobile devices.`
+    description: `Designing products that are intuitive, impactful, and user-driven.
+I manage the entire design process—from user stories to wireframing, prototyping, testing, and iterating. I prioritize user experience in every step of product development, ensuring that products are not only functional but delightful to use.`,
+    stat: 'Designed 7 products | 100+ Features'
+  },
+  {
+    name: 'Stakeholder & Partner Engagement',
+    highlighter: 'Strong partnerships aren’t built overnight — I build trust, drive value, and foster collaboration that lasts.',
+    thumbnail: '/images/skills/mobile-development.jpg',
+    description: `Building strong partnerships and driving stakeholder alignment.
+I excel at building and nurturing relationships with stakeholders and partners. Whether managing external vendors or collaborating with internal teams, I ensure that every engagement is aligned with business objectives and user needs.`,
+    stat: '1000+ Stakeholders | 20+ Partners'
+  },
+  {
+    name: ' Execution Excellence with Agile Product Operations',
+    highlighter: 'I turn complex roadmaps into seamless execution—delivering impact, iteration after iteration.',
+    thumbnail: '/images/skills/mobile-development.jpg',
+    description: `Driving seamless product delivery through agile processes and DevOps excellence.
+I am proficient in agile workflows, DevOps integrations, and managing tools like JIRA, GitHub, and Product Board. I ensure that all stages of the product lifecycle, from ideation to deployment, are optimized for efficiency and scalability.`,
+    stat: '100% Delivery Rate on time'
   }
 ];
 

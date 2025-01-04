@@ -10,6 +10,7 @@ import {
   DialogContainer
 } from '@/components/motion/dialog';
 import { PlusIcon } from 'lucide-react';
+import { Badge } from '@/components/ui/badge'; // Import the badge
 import { Skill } from '@/types/skill';
 
 import { trimLen } from '@/components/sections/skills/config';
@@ -27,14 +28,22 @@ interface SkillCardProps extends Skill {
   className?: string;
 }
 
-// todo: use text reveal for name and description
-// todo: use motion-primitives text-reveal
 export default function SkillCard({
   name,
   description,
   thumbnail,
+  stat,
+  highlighter,
   className
 }: SkillCardProps) {
+  function formatDescription(description: string | undefined): string | null | undefined {
+    if (!description) return description;
+    return description
+      .replace(/Why it's critical:/g, '**Why it\'s critical:**') // Bold headings
+      .replace(/What to emphasize:/g, '**What to emphasize:**')
+      .replace(/Future focus:/g, '**Future focus:**')
+      .replace(/\n/g, '\n\n'); // Double line breaks for paragraph spacing
+  }
   return (
     <Dialog
       transition={{
@@ -52,11 +61,6 @@ export default function SkillCard({
           className
         )}
       >
-        {/* <DialogImage
-          src="/eb-27-lamp-edouard-wilfrid-buquet.jpg"
-          alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-          className="h-48 w-full object-cover"
-        /> */}
         <div className="flex flex-grow flex-col items-end justify-between gap-4 p-6">
           <button
             type="button"
@@ -66,11 +70,16 @@ export default function SkillCard({
             <PlusIcon size={18} />
           </button>
           <div className="flex w-full flex-col gap-2">
-            <DialogTitle className="text-3xl font-bold leading-8 tracking-tight text-zinc-950 dark:text-zinc-50">
-              <TextReveal>
-                {name}
-              </TextReveal>
-            </DialogTitle>
+            <div className="flex justify-between items-center">
+              <DialogTitle className="text-3xl font-bold leading-8 tracking-tight text-zinc-950 dark:text-zinc-50">
+                <TextReveal>{name}</TextReveal>
+              </DialogTitle>
+              {stat && (
+                <Badge variant="secondary" className="px-3 py-1 text-xs">
+                  {stat}
+                </Badge>
+              )}
+            </div>
             <DialogSubtitle className="text-md text-muted-foreground text-zinc-700 dark:text-zinc-400">
               <TextReveal>
                 {trimLen != -1
@@ -102,12 +111,21 @@ export default function SkillCard({
             />
           )}
           <div className="flex flex-col p-6 gap-2">
-            <DialogTitle className="text-3xl font-bold leading-8 tracking-tight text-zinc-950 dark:text-zinc-50">
-              {name}
-            </DialogTitle>
-            {/* <DialogSubtitle className="text-zinc-700 dark:text-zinc-400">
-              {description}
-            </DialogSubtitle> */}
+            <div className="flex justify-between items-center">
+              <DialogTitle className="text-3xl font-bold leading-8 tracking-tight text-zinc-950 dark:text-zinc-50">
+                {name}
+              </DialogTitle>
+              {stat && (
+                <Badge variant="outline" className="px-3 py-1 text-sm">
+                  {stat}
+                </Badge>
+              )}
+            </div>
+            {highlighter && (
+              <p className="italic text-lg text-zinc-600 dark:text-zinc-300 border-l-4 pl-4 border-zinc-500">
+                {highlighter}
+              </p>
+            )}
             <DialogDescription
               className="text-md text-muted-foreground text-zinc-700 dark:text-zinc-400"
               disableLayoutAnimation
@@ -122,7 +140,7 @@ export default function SkillCard({
                 remarkPlugins={[remarkGfm, remarkMath]}
                 components={{
                   p({ children }) {
-                    return <p className="mb-2 last:mb-0">{children}</p>;
+                    return <p className="mb-4 last:mb-0">{children}</p>;
                   }
                 }}
               >

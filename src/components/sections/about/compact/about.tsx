@@ -19,11 +19,11 @@ function About() {
                 Balaji Nagaraj Kumar hails from a humble background, rising through perseverance and passion to become a technically adept and visionary leader. With expertise in product management, digital transformation, and engineering innovation, he bridges technical depth with leadership excellence. Balaji’s journey is a testament to grit, turning challenges into opportunities and bold ideas into impactful realities.
               </p>
               <div className="flex gap-2">
-                <Button asChild variant={'outline'}>
+                {/* <Button asChild variant={'outline'}>
                   <a href="resume.pdf" target="_blank">
                     View Resume <ArrowUpRightIcon className="ml-2 size-5" />
                   </a>
-                </Button>
+                </Button> */}
                 <Button asChild>
                   <Link href="/about">Learn More</Link>
                 </Button>

@@ -78,7 +78,7 @@ function Hero() {
         src="/images/Hero.png" // Replace with your decorative image
         containerRef={container}
         alt="Hero image"
-        containerClassName="aspect-[3/2] mx-auto max-w-2/3 w-[70%] md:w-[80%] lg:w-[70%]"
+        containerClassName="aspect-[3/2] mt-12 mx-auto max-w-2/3 w-[70%] md:w-[80%] lg:w-[70%]"
         priority
         parallaxOptions={{
           yStart: '-20%',

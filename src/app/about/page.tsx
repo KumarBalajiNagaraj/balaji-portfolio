@@ -97,7 +97,7 @@ export default function About() {
           work today.
         </p>
         <Image
-          src="/images/education.jpg"
+          src="/images/about3.jpeg"
           alt="Education"
           className="rounded-lg shadow-md"
           width={800}

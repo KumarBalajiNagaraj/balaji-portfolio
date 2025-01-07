@@ -59,7 +59,7 @@ function SkillCard({ name, description, stat, highlighter, className }: SkillCar
             <h3 className="text-xl font-semibold flex items-center gap-2">
               {name}
               {stat && (
-                <Badge variant="outline" className="text-xs px-2 py-1">
+                <Badge variant="outline" className="text-xs px-3 py-3">
                   {stat}
                 </Badge>
               )}

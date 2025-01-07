@@ -8,7 +8,7 @@ const skills: Skill[] = [
     // todo: use proper thumbnail pics
     highlighter: 'Not just in words, but in action - I turn ideas into reality with a clear vision and strategy.',
     thumbnail: '/images/skills/web-development.jpg',
-    description: `Driving long-term impact through product innovation and alignment. I excel at conceptualizing long-term product roadmaps, aligning business objectives with user needs, and adapting to market trends. My strength lies in transforming strategic visions into actionable initiatives that lead to tangible milestones and market success.`,
+    description: `Driving long-term impact through product innovation and alignment. I excel at conceptualizing long-term product roadmaps, aligning business objectives with user needs, and adapting to market trends.`,
     stat: '7+ Years | 15 Products'
   },
   {
@@ -39,7 +39,8 @@ I manage the entire design process—from user stories to wireframing, prototypi
     highlighter: 'Strong partnerships aren’t built overnight — I build trust, drive value, and foster collaboration that lasts.',
     thumbnail: '/images/skills/mobile-development.jpg',
     description: `Building strong partnerships and driving stakeholder alignment.
-I excel at building and nurturing relationships with stakeholders and partners. Whether managing external vendors or collaborating with internal teams, I ensure that every engagement is aligned with business objectives and user needs.`,
+Maintained a 98% stakeholder alignment rate through transparent communication and clear KPIs.
+Secured 25% cost savings via strategic vendor negotiations and partnership collaborations.`,
     stat: '1000+ Stakeholders | 20+ Partners'
   },
   {
@@ -47,7 +48,8 @@ I excel at building and nurturing relationships with stakeholders and partners. 
     highlighter: 'I turn complex roadmaps into seamless execution—delivering impact, iteration after iteration.',
     thumbnail: '/images/skills/mobile-development.jpg',
     description: `Driving seamless product delivery through agile processes and DevOps excellence.
-I am proficient in agile workflows, DevOps integrations, and managing tools like JIRA, GitHub, and Product Board. I ensure that all stages of the product lifecycle, from ideation to deployment, are optimized for efficiency and scalability.`,
+Consistently delivered releases 20% under budget through agile workflows and DevOps best practices.
+Optimized product life cycles, trimming deployment times by 45% with best industry tools like JIRA, GitHub, and Product Board`,
     stat: '100% Delivery Rate on time'
   }
 ];
